@@ -1,3 +1,36 @@
 
+body {
+    background-size: cover;
+    font-family: 'Space Mono', monospace;
+	color: #ffffff;
+	font-size: 10px;
+}
 
-font-family: 'Space Mono', monospace;
+h1{
+	font-family: 'Space Mono', monospace;
+	text-align: center;
+	padding-bottom:20px;
+	color: #ffffff;
+	border-bottom:2px solid #ffffff;
+}
+
+.jumbotron{
+	margin-top: 40px;
+	background-color: #666672;
+	margin-bottom:200px;
+}
+
+.footer{
+    position: fixed;
+    height: 70px;
+    bottom: 0;
+    width: 100%;
+	font-family: 'Space Mono', monospace;
+	color:#ffffff;
+    font-size:14px;
+    text-align:center;
+    padding-top:20px;
+    border-top:2px solid #ffffff;
+    margin-top:100px;
+    clear:both;
+}

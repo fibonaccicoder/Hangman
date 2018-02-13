@@ -3,34 +3,47 @@
 <head>
 	<title>Hangman Game</title>
 	<meta charset="UTF-8">
-
-    <!-- Bootstrap 3 -->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/> 
-    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+			<link rel="stylesheet" href="assets/css/reset.css"/>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 		crossorigin="anonymous">
+			<link rel="stylesheet" href="assets/css/style.css"/>
+   			<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet"/>
 
 </head>
-<body>
+<body  style="background: url('assets/images/galaxy2.jpg')">
+	<div class="container">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+          <div class="jumbotron">
+            <h1>SPACE HANGMAN</h1>
+            <br>
+             <p>Press any key to get your hangman on!</p>
+                    <br>
+                    <p>Wins:    <span id="wins"></span>Losses: <span id="losses"></span></p>
+                    <br>                    
+                    <p>Current Word: </p>
+                        <span id="currentWord"></span>
+                    <br>                    
+                    <p>Letters already guessed: </p>
+                        <div id="lettersGuessed"></div>
+                    <br>                    
+                    <p>Guesses Remaining: </p>
+                        <div id="guessesRemaining"></div>
+                    <br>                    
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<div class = "content-on-top">
-		<div class = "row header">
-			<div class = "">
+		<div class="row">
+		<div class="col-xs-12 col-xl-12 footer">
+			<p>
+				© 2018 Copyright Patricia Martinez
+			</p>
 		</div>
 	</div>
-
-	<div class = "row">
-		<div class = "col-xs-12 col-sm-6 content decoration"></div>
-		<div class = "col-xs-12 col-sm-6 content mainSection"></div>
-			<p> Press any button to get your hangman on! </p>
-			<br>
-			<div id = "wins">Wins: </div>
-
-			<div id = "losses">Losses: </div>
-
-			<div id = "lettersGuessed">Letters guessed: </div>
-
-			<div id = "guessesRemaining"> Guesses remaining: </div>
+	
 
 	<script src="assets/javascript/game.js"></script>
 

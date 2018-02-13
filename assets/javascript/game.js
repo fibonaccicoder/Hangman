@@ -12,21 +12,26 @@ var correctLetters= [];
 var winningLetters= [];
 var incorrectGuesses=[];
 var wordSplit=[];
-var guessesRemaining=10
+var guessesRemaining=10;
 
+var 
 
-document.onkeyup=function(event){
+function gameStart (){
+
+document.onkeyup=function (){
+
+currentWord = words[Math.floor(Math.random()*words.length)];
+wordSplit = currentWord.split("");
 
 for(var i=0; i< words.length; i++){
 	console.log(words[i]);
 }
 
-//currentWord= Math.floor(Math.random()*words.length)];
-	currentWord= (Math.floor(Math.random()*words.length));
-	document.WRITE("Current word: " currentWord);
-
 
 wordSplit= currentWord.split("");
+console.log("word split" + wordSplit);
+
+}
 
 }
 //getelementbyid
@@ -38,11 +43,11 @@ wordSplit= currentWord.split("");
 // 		-pick number between 0 and length (less than length)
 // 		-use number as index (place in array) 
 // 	-store it (as variable)
-// 	-lettersinword['a','l']
+// 	-letters in word without repeat ['a','l']
 
 // check for user input
 // 	-onkeyup event (errrrrrrraythang inside.)
-// 	-key and store it as lowercase (initialize n array)
+// 	-key and store it as lowercase (initialize array)
 // 	-check to see if its a letter (check against array of letters, if index of letter in array !==-1, 
 // 		-if yes, add to list of guessed letters, check guessed letters, if in guessed letters, do nothing, if no, add to guessed list 
 // 		-if no, do nothing 
