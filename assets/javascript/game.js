@@ -3,37 +3,70 @@
 // onkeyup
 
 var words= ["aliens", "quasar", "rocket", "astronaut", "galaxy", "supernova"];
-var currentWord=[]
+var currentWord;
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var wins= 0;
-var losses= 0;
-var lettersGuessed= [];
-var correctLetters= [];
-var winningLetters= [];
-var incorrectGuesses=[];
 var wordSplit=[];
-var guessesRemaining=10;
+var userGuess;
+var lettersGuessed=[];
+var display=[];
+var wins=0;
+var losses=0;
+var guessesRemaining=12;
+var html=
+"<p> Word to get: "+ display +"</p>"+
+"<p> Guesses Remaining: "+ guessesRemaining + "</p>"+
+"<p> wins: "+ wins +"</p>" +
+"<p> losses "+ losses +"</p>"+
+"<p> Already Guessed: " + lettersGuessed + "</p>"
+;
 
-var 
 
-function gameStart (){
-
-document.onkeyup=function (){
-
-currentWord = words[Math.floor(Math.random()*words.length)];
-wordSplit = currentWord.split("");
-
-for(var i=0; i< words.length; i++){
-	console.log(words[i]);
+//functions here
+function gameFucker (){
+	currentWord=words[Math.floor(Math.random() * words.length)];
+	console.log(currentWord);
+	wordSplit=currentWord.split("");
+	for (var i = 0; i<wordSplit.length; i++){
+		display[i]=("_");
+	}
+	 updateHTML();
 }
 
-
-wordSplit= currentWord.split("");
-console.log("word split" + wordSplit);
+function isGuessValid(){
+	for (var i=0; i<letters.length; i++){
+		if ((letters).indexOf(userGuess) !== -1 && (lettersGuessed).indexOf(userGuess) === -1){
+			lettersGuessed.push(userGuess)
+		}
+	}
 
 }
 
+function checkGuess(){
+
 }
+
+function updateHTML(){
+	 html=
+"<p> Puzzle: "+ display +"</p>"+
+"<p> Guesses Remaining: "+ guessesRemaining + "</p>"+
+"<p> wins: "+ wins +"</p>" +
+"<p> losses "+ losses +"</p>"+
+"<p> Already Guessed: " + lettersGuessed + "</p>"
+;
+document.querySelector("#game").innerHTML=html;
+}
+
+//process
+gameFucker();
+document.onkeyup=function(event){
+	userGuess=event.key;
+	userGuess=userGuess.toLowerCase();
+	updateHTML();
+}
+
+isGuessValid();
+updateHTML();
+
 //getelementbyid
 
 // pick a word (and print)
