@@ -2,7 +2,7 @@
 // game start
 // onkeyup
 
-var words= ["aliens", "quasar", "rocket", "astronaut", "galaxy", "supernova"];
+var words= ["aliens", "quasar", "rocket", "astronaut", "galaxy", "supernova", "elonmuskisbae", "cosmos", "space", "planet", "meteor", "comet"];
 var currentWord;
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var wordSplit=[];
@@ -30,6 +30,11 @@ function gameFucker (){
 		display[i]=("_");
 	}
 	 updateHTML();
+}
+
+function guessesLeft (){
+	guessesRemaining--;
+	
 }
 
 function isGuessValid(){
